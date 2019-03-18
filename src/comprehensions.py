@@ -2,7 +2,7 @@
 List comprehensions are one cool and unique feature of Python.
 They essentially act as a terse and concise way of initializing
 and populating a list given some expression that specifies how
-the list should be populated. 
+the list should be populated.
 
 Take a look at https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
 for more info regarding list comprehensions.
@@ -11,7 +11,7 @@ for more info regarding list comprehensions.
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 
 y = []
-
+y = list(map(lambda x : x + 1,range(5)))
 print (y)
 
 # Write a list comprehension to produce the cubes of the numbers 0-9:
@@ -19,6 +19,7 @@ print (y)
 
 y = []
 
+y = [x ** 2 for x in range(10)]
 print(y)
 
 # Write a list comprehension to produce the uppercase version of all the
@@ -26,7 +27,7 @@ print(y)
 
 a = ["foo", "bar", "baz"]
 
-y = []
+y = [x.upper() for x in a]
 
 print(y)
 
@@ -34,8 +35,9 @@ print(y)
 # the user entered into list x.
 
 x = input("Enter comma-separated numbers: ").split(',')
-
+print(x)
 # What do you need between the square brackets to make it work?
-y = []
+y= [x[q] for q in range(len(x)) if q % 2 == 0]
+
 
 print(y)
