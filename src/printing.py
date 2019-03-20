@@ -14,6 +14,7 @@ z = "I like turtles!"
 print("x is %s" % x)
 print("y is %s" % y)
 print('z is %s' % z)
+print("x is %d , y is %.2f, z is \"%s\"" % (x, y, z))
 
 # Use the 'format' string method to print the same thing
 print("x is {}".format(x))
